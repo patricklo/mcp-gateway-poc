@@ -50,7 +50,7 @@ public class ApiTest {
 
         OpenAiApi openAiApi = OpenAiApi.builder()
                 .baseUrl("http://127.0.0.1:8771")
-                .apiKey("sk-MEhn88b6iV7THIHp00724b306cAc41C0A1774eEd4aB99114")
+                .apiKey("OPENAI_API_KEY")
                 .completionsPath("v1/chat/completions")
                 .embeddingsPath("v1/embeddings")
                 .build();

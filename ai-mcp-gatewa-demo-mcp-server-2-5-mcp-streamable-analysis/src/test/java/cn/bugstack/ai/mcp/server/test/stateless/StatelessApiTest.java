@@ -22,7 +22,7 @@ public class StatelessApiTest {
     public static void main(String[] args) throws Exception {
         OpenAiApi openAiApi = OpenAiApi.builder()
                 .baseUrl("https://apis.itedus.cn")
-                .apiKey("sk-plI5Vzs4AQWWJkDT29Af517d624a4d48Ac9fA75589Ee30Fd")
+                .apiKey("OPENAI_API_KEEY")
                 .completionsPath("v1/chat/completions")
                 .embeddingsPath("v1/embeddings")
                 .build();
