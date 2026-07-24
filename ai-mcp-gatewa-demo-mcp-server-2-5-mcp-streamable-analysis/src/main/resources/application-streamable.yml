@@ -1,0 +1,21 @@
+server:
+  port: 8701
+
+# http://localhost:8701/api/mcp
+spring:
+  config:
+    activate:
+      on-profile: streamable
+  main:
+    web-application-type: servlet # 启用Web
+  ai:
+    mcp:
+      server:
+        protocol: STREAMABLE
+        streamable-http:
+          mcp-endpoint: /api/mcp
+          keep-alive-interval: 30s
+
+logging:
+  file:
+    name: data/log/${spring.application.name}.log

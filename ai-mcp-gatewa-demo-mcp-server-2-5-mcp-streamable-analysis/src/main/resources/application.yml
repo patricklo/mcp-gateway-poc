@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ai-mcp-gateway-demo-mcp-server-test
+  config:
+    name: ai-mcp-gateway-demo-mcp-server-test
+  profiles:
+#    active: stdio
+    active: sse
+#    active: streamable
+#    active: stateless
+  ai:
+    mcp:
+      server:
+        name: ai-mcp-gateway-mcp-server-demo  # 服务名
+        version: 0.0.1  # 版本号
+        type: SYNC
+        instructions: |
+          This server provides demo tools for Java MCP development.
+          Use getCityTime for timezone lookup, sumNumbers for calculation,
+          and projectSummary for quick project scaffolding summaries.

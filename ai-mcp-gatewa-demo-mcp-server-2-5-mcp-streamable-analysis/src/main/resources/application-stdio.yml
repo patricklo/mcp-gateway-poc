@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: stdio
+  main:
+    web-application-type: none  # STDIO禁用web应用类型
+    banner-mode: off            # STDIO禁用banner
+  ai:
+    mcp:
+      server:
+        stdio: true # 启用stdio模式

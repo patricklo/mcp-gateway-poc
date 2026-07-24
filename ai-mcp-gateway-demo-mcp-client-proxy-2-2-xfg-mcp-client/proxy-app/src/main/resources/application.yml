@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: mcp-gateway-demo-proxy-app
+  profiles:
+    active: dev

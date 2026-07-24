@@ -1,0 +1,29 @@
+server:
+  port: 8701
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+# http://localhost:8701/sse
+spring:
+  main:
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        name: ${spring.application.name}
+        version: 1.0.0
+        type: ASYNC
+        instructions: "This server provides weather information tools and resources"
+        sse-message-endpoint: /mcp/messages
+        capabilities:
+          tool: true
+          resource: true
+          prompt: true
+          completion: true
+
+logging:
+  file:
+    name: data/log/${spring.application.name}.log
