@@ -56,7 +56,7 @@ public class ApiTest {
     public McpSyncClient sseMcpClient01() {
         HttpClientSseClientTransport sseClientTransport = HttpClientSseClientTransport
                 .builder("http://appbuilder.baidu.com")
-                .sseEndpoint("/v2/ai_search/mcp/sse?api_key=Bearer+bce-v3/ALTAK-2vlXuMfX4VZKS3LtB4r2x/0e7084a97c4b3f921b490b46fd5de66ebf52f61b")
+                .sseEndpoint("/v2/ai_search/mcp/sse?api_key=Bearer+  BAIDU_API_KEY")
                 .build();
 
         McpSyncClient mcpSyncClient = McpClient.sync(sseClientTransport).requestTimeout(Duration.ofMinutes(36000)).build();
