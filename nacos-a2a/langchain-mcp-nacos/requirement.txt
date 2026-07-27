@@ -1,0 +1,8 @@
+# AgentScope 核心（ReActAgent / OpenAIChatModel / Memory / Toolkit 等）
+pip install agentscope
+# AgentScope Runtime（AgentApp / AgentRequest / NacosRegistry 等）
+pip install agentscope-runtime
+# A2A 协议类型（AgentCard / AgentCapabilities）
+pip install a2a-sdk
+# Nacos SDK（ClientConfigBuilder，需 v2 API，版本建议 >= 3.0）
+pip install "nacos-sdk-python>=3.0.0"

@@ -1,0 +1,10 @@
+[project]
+name = "langchain-mcp-nacos"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "a2a-sdk>=0.3.26",
+    "agentscope>=2.0.5",
+    "agentscope-runtime>=1.1.6.post2",
+    "nacos-sdk-python>=3.0.0",
+]
