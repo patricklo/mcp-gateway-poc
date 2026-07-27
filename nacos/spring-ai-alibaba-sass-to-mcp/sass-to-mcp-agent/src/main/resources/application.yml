@@ -1,0 +1,42 @@
+logging:
+  config: classpath:logback-spring.xml
+
+spring:
+  application:
+    name: sass-to-mcp-agent
+  main:
+    web-application-type: none
+  ai:
+    dashscope:
+      api-key: #阿里百炼API
+      base-url: https://dashscope.aliyuncs.com
+      chat:
+        options:
+          model: qwen-flash
+    alibaba:
+      mcp:
+        nacos:
+          client:
+            enabled: true
+            sse:
+              connections:
+                server1:
+                  service-name: sass-to-mcp-mcp-server # Nacos 中对应 MCP Server 的服务名
+                  version: 1.0.0 # Nacos 中对应 MCP Server 的版本号
+            configs:
+              server1:
+                 namespace: public
+                 server-addr: 127.0.0.1:8848
+                 username: nacos
+                 password: nacos
+    mcp:
+      client:
+        enabled: true
+        name: sass-to-mcp-agent
+        version: 0.0.1
+        initialized: true
+        request-timeout: 600s
+        type: sync
+        toolcallback:
+          enabled: true
+        root-change-notification: true
